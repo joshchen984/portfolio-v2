@@ -4,6 +4,8 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import About from '../components/About';
 import Projects from '../components/Projects';
+import Footer from '../components/Footer';
+
 const IndexPage = () => {
   const projectsRef = useRef<HTMLElement | null>(null);
   const scrollToProjects = () => {
@@ -52,6 +54,7 @@ const IndexPage = () => {
         <Header scrollToProjects={scrollToProjects} />
         <About />
         <Projects reference={projectsRef} />
+        <Footer />
       </Layout>
     </>
   );
