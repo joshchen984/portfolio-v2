@@ -2,7 +2,9 @@ import styled from '@emotion/styled';
 
 type ButtonProps = {
   round?: boolean;
-  href: string;
+  href?: string;
+  target?: string;
+  rel?: string;
 };
 export const Button = styled.button<ButtonProps>`
   padding: 0.5em 1em;

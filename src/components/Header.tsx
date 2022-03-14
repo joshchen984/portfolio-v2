@@ -4,7 +4,10 @@ import Title from './Title';
 import HeaderVideo from './HeaderVideo';
 import { Button } from './Buttons';
 
-const Header = () => {
+type HeaderProps = {
+  scrollToProjects: () => void;
+};
+const Header = ({ scrollToProjects }: HeaderProps) => {
   return (
     <header
       css={css`
@@ -22,7 +25,7 @@ const Header = () => {
     >
       <HeaderVideo />
       <Title>Josh Chen</Title>
-      <Button round as="a" href="#projects" role="button">
+      <Button round onClick={scrollToProjects}>
         See Projects
       </Button>
     </header>

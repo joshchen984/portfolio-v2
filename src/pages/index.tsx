@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Global, css } from '@emotion/react';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import About from '../components/About';
+import Projects from '../components/Projects';
 const IndexPage = () => {
+  const projectsRef = useRef<HTMLElement | null>(null);
+  const scrollToProjects = () => {
+    if (projectsRef.current) {
+      projectsRef.current.scrollIntoView();
+    }
+  };
   return (
     <>
       <Global
@@ -32,11 +39,19 @@ const IndexPage = () => {
           img {
             max-width: 100%;
           }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5 {
+            font-family: 'Raleway', sans-serif;
+          }
         `}
       />
       <Layout>
-        <Header />
+        <Header scrollToProjects={scrollToProjects} />
         <About />
+        <Projects reference={projectsRef} />
       </Layout>
     </>
   );
