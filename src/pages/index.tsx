@@ -6,6 +6,7 @@ import About from '../components/About';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 import { mq } from '../utils/breakpoints';
+import { Helmet } from 'react-helmet';
 
 const IndexPage = () => {
   const projectsRef = useRef<HTMLElement | null>(null);
@@ -51,6 +52,16 @@ const IndexPage = () => {
           }
         `}
       />
+      <Helmet>
+        <meta charSet="UTF-8" />
+        <title>Josh Chen</title>
+        <meta
+          name="description"
+          content="I'm a high schooler interested in majoring in computer science."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+      </Helmet>
       <Layout>
         <Header scrollToProjects={scrollToProjects} />
         <About />

@@ -77,7 +77,7 @@ const Projects = ({ reference }: ProjectsProps) => {
           title="Text2Video"
           description="A web app that turns a story written by the user into a full video with images and audio."
           sourceCode="https://github.com/joshchen984/Text2Video"
-          demoLink=""
+          demoLink="http://167.172.145.164/"
           image={TextVideoImage}
           imageAlt="Text2Video"
         />
