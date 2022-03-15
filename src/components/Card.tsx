@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { Button } from './Buttons';
+import { mq } from '../utils/breakpoints';
 
 type CardProps = {
   demoVideo?: boolean;
@@ -24,6 +25,9 @@ const Card = ({
     font-size: 1.2em;
     padding: 0.7em 2em;
     margin: 0 1vw;
+    ${mq[2]} {
+      margin: 1vh 0;
+    }
   `;
   let DemoButton = (
     <Button
@@ -51,6 +55,12 @@ const Card = ({
         img {
           width: 100%;
         }
+        ${mq[0]} {
+          grid-column: span 3;
+        }
+        ${mq[1]} {
+          grid-column: span 6;
+        }
       `}
     >
       <img src={image} alt={imageAlt} />
@@ -73,6 +83,9 @@ const Card = ({
           padding: 0 1rem;
           font-size: 1.2rem;
           height: 6rem;
+          ${mq[2]} {
+            height: 7rem;
+          }
         `}
       >
         {description}
@@ -83,6 +96,9 @@ const Card = ({
           display: flex;
           justify-content: center;
           align-items: center;
+          ${mq[2]} {
+            flex-direction: column;
+          }
         `}
       >
         {DemoButton}

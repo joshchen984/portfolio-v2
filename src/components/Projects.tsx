@@ -6,6 +6,7 @@ import ClassityImage from '../images/Classity.png';
 import TextVideoImage from '../images/Text2Video.png';
 import backgroundImage from '../images/ceiling.jpg';
 import Heading from './Heading';
+import { mq } from '../utils/breakpoints';
 
 type ProjectsProps = {
   reference: any;
@@ -24,6 +25,10 @@ const Projects = ({ reference }: ProjectsProps) => {
           url('${backgroundImage}');
         background-size: cover;
         transform: skewY(-5deg);
+
+        ${mq[2]} {
+          padding: 2rem 2rem 10rem;
+        }
       `}
     >
       <Heading
@@ -44,6 +49,9 @@ const Projects = ({ reference }: ProjectsProps) => {
           transform: skewY(5deg);
           column-gap: 5vw;
           row-gap: 3vh;
+          ${mq[1]} {
+            column-gap: 0;
+          }
         `}
       >
         <Card

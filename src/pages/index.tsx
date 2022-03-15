@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
+import { mq } from '../utils/breakpoints';
 
 const IndexPage = () => {
   const projectsRef = useRef<HTMLElement | null>(null);

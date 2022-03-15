@@ -4,6 +4,8 @@ import Python from '../images/python.png';
 import NodeImage from '../images/nodejs.png';
 import ReactImage from '../images/react.png';
 import Heading from './Heading';
+import { mq } from '../utils/breakpoints';
+
 const About = () => {
   return (
     <section
@@ -17,6 +19,9 @@ const About = () => {
 
         & > div {
           transform: skewY(5deg);
+        }
+        ${mq[2]} {
+          padding: 5rem 2rem;
         }
       `}
     >
@@ -35,6 +40,9 @@ const About = () => {
         <div
           css={css`
             grid-column: span 1;
+            ${mq[2]} {
+              grid-column: span 2;
+            }
           `}
         >
           <p>
@@ -53,6 +61,9 @@ const About = () => {
               &:hover {
                 transform: scale(1.1);
               }
+            }
+            ${mq[2]} {
+              grid-column: span 2;
             }
           `}
         >

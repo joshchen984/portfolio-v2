@@ -25,7 +25,14 @@ const Header = ({ scrollToProjects }: HeaderProps) => {
     >
       <HeaderVideo />
       <Title>Josh Chen</Title>
-      <Button round onClick={scrollToProjects}>
+      <Button
+        round
+        onClick={scrollToProjects}
+        css={css`
+          font-size: 30px;
+          font-family: 'Raleway', sans-serif;
+        `}
+      >
         See Projects
       </Button>
     </header>
